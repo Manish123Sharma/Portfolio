@@ -7,7 +7,7 @@ import {
     AiFillInstagram,
 } from "react-icons/ai";
 import { FaLinkedinIn } from "react-icons/fa";
-import myImg from "../../Assets/avatar.svg";
+import myImg from "../../assets/avatar.svg";
 
 const Home2 = () => {
     return (
