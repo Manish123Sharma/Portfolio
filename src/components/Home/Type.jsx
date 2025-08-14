@@ -10,6 +10,7 @@ const Type = () => {
                     "Freelancer",
                     "MERN Stack Developer",
                     "Open Source Contributor",
+                    "Flutter Developer",
                 ],
                 autoStart: true,
                 loop: true,
