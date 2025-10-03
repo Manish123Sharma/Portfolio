@@ -24,6 +24,17 @@ const Projects = () => {
                         <ProjectCards
                             imgPath={chatify}
                             isBlog={false}
+                            title="ClubHive"
+                            description=" Developed a full-stack event management platform with user and admin roles. Implemented secure authentication, role-based access, and payment processing efficiency by 15%. User Features: Browse, filter, and search events by country, city, category, or name; register via online payments; RSVP; join
+                            event chat groups; update profile and credentials. Admin Features: Create, update, delete events; manage user profiles; track payments.Integrated Google Maps API for event location visualization."
+                            ghLink="https://github.com/Manish123Sharma/ClubHive-Web"
+                            // demoLink="https://electronicsmartapi.github.io/"
+                        />
+                    </Col>
+                    <Col md={4} className="project-card">
+                        <ProjectCards
+                            imgPath={chatify}
+                            isBlog={false}
                             title="Electronics Mart"
                             description="A full-featured electronics e-commerce platform with secure user and admin functionality, including authentication, product browsing/search/filtering, cart management. The admin panel offers 2FAand a dashboard with analytics on users, sales, and orders."
                             ghLink="https://github.com/Manish123Sharma/E-Mart"
