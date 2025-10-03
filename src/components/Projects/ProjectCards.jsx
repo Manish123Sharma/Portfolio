@@ -13,9 +13,19 @@ const ProjectCards = (props) => {
             <Card.Img variant="top" src={props.imgPath} alt="card-img" />
             <Card.Body>
                 <Card.Title>{props.title}</Card.Title>
-                <Card.Text style={{ textAlign: "justify" }}>
+                <Card.Text
+                    style={{
+                        textAlign: "justify",
+                        display: "-webkit-box",
+                        WebkitLineClamp: props.maxLines || 5,
+                        WebkitBoxOrient: "vertical",
+                        overflow: "hidden",
+                        textOverflow: "ellipsis"
+                    }}
+                >
                     {props.description}
                 </Card.Text>
+
                 <Button variant="primary" href={props.ghLink} target="_blank">
                     <BsGithub /> &nbsp;
                     {props.isBlog ? "Blog" : "GitHub"}
@@ -46,7 +56,8 @@ ProjectCards.propTypes = {
     description: PropTypes.string.isRequired,
     ghLink: PropTypes.string.isRequired,
     isBlog: PropTypes.bool,
-    demoLink: PropTypes.string
+    demoLink: PropTypes.string,
+    maxLines: PropTypes.number
 };
 
 export default ProjectCards;
