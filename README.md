@@ -1,12 +1,54 @@
-# React + Vite
+# 🌐 Personal Portfolio Website
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A responsive and modern **Portfolio Website** built using **React.js** and **Vite**.  
+This portfolio highlights my skills, projects, and experience as a developer, with a clean UI and smooth navigation.  
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 Live Demo
+🔗 [View Portfolio](https://portfolio-five-swart-59.vercel.app/project)
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 📂 GitHub Repository
+🔗 [Portfolio Repo](https://github.com/Manish123Sharma/Portfolio)
+
+---
+
+## ✨ Features
+- 📌 Showcase of my projects with details and live links  
+- 📱 Fully responsive design for all screen sizes  
+- 🎨 Modern UI/UX with clean layout  
+- ⚡ Fast performance powered by Vite  
+- 📬 Contact section for easy communication  
+
+---
+
+## 🛠️ Tech Stack
+- **Frontend:** React.js, Vite  
+- **Styling:** CSS / Bootstrap / Tailwind (depending on what you used)  
+- **Deployment:** Vercel  
+
+---
+
+## 🏗️ Installation & Setup
+If you’d like to run this portfolio locally:
+
+# Clone the repo
+    git clone https://github.com/Manish123Sharma/Portfolio
+
+# Navigate to the project folder
+    cd Portfolio
+
+# Install dependencies
+    npm install
+
+# Start development server
+    npm run dev
+---
+
+## **👨‍💻** **Author**
+
+Manish Kumar Sharma
+
+[📧 Email](mailto:your-mksharma256001@gmail.com) | [💼 LinkedIn](https://www.linkedin.com/in/mks001/) | [🌐 GitHub](https://github.com/Manish123Sharma)
