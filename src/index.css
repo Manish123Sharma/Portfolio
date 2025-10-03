@@ -479,6 +479,16 @@ button:focus {
     background-image: var(--section-background-color) !important;
 }
 
+.card-text-clamp {
+    display: -webkit-box;
+    -webkit-line-clamp: 5;
+    /* number of lines before truncating */
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+
 .project-card {
     padding-top: 50px !important;
     padding-bottom: 50px !important;
