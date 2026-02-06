@@ -11,7 +11,9 @@ const AboutCard = () => {
                         Hi Everyone, I am <span className="purple">Manish Kumar Sharma</span>{" "}
                         from <span className="purple"> Noida, India.</span>
                         <br />
-                        I am currently working as Freelancer.
+                        I am currently working as Software Developer as RS Matrimonial.
+                        <br />
+                        I also work as SDE Freelance.
                         <br />
                         I have completed B.Tech in Computer Science and Engineering from The NorthCap University.
                         <br />
