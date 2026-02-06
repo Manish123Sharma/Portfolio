@@ -9,7 +9,7 @@ const AboutCard = () => {
                 <blockquote className="blockquote mb-0">
                     <p style={{ textAlign: "justify" }}>
                         Hi Everyone, I am <span className="purple">Manish Kumar Sharma</span>{" "}
-                        from <span className="purple"> Rewari, India.</span>
+                        from <span className="purple"> Noida, India.</span>
                         <br />
                         I am currently working as Freelancer.
                         <br />
