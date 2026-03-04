@@ -13,6 +13,8 @@ import {
     AiOutlineHome,
     AiOutlineFundProjectionScreen,
     AiOutlineUser,
+    AiOutlineMail,
+    AiOutlineTool,
 } from "react-icons/ai";
 import logo from "../assets/logo.png";
 
@@ -37,8 +39,6 @@ const NavBar = () => {
             window.removeEventListener("scroll", scrollHandler);
         };
     }, []);
-
-    window.addEventListener("scroll", scrollHandler);
 
     return (
         <Navbar
@@ -87,6 +87,28 @@ const NavBar = () => {
                                     style={{ marginBottom: "2px" }}
                                 />{" "}
                                 Projects
+                            </Nav.Link>
+                        </Nav.Item>
+
+                        <Nav.Item>
+                            <Nav.Link
+                                as={Link}
+                                to="/contact"
+                                onClick={() => setExpand(false)}
+                            >
+                                <AiOutlineMail style={{ marginBottom: "2px" }} />{" "}
+                                Contact
+                            </Nav.Link>
+                        </Nav.Item>
+
+                        <Nav.Item>
+                            <Nav.Link
+                                as={Link}
+                                to="/skills"
+                                onClick={() => setExpand(false)}
+                            >
+                                <AiOutlineTool style={{ marginBottom: "2px" }} />{" "}
+                                Skills
                             </Nav.Link>
                         </Nav.Item>
 

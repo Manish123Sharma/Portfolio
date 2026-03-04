@@ -10,7 +10,10 @@ import '../../index.css';
 const ProjectCards = (props) => {
     return (
         <Card className="project-card-view">
-            <Card.Img variant="top" src={props.imgPath} alt="card-img" />
+            <div className="card-image-wrapper">
+                <Card.Img variant="top" src={props.imgPath} alt="card-img" />
+                <div className="card-overlay"></div>
+            </div>
             <Card.Body>
                 <Card.Title>{props.title}</Card.Title>
                 <Card.Text
@@ -21,15 +24,24 @@ const ProjectCards = (props) => {
                         WebkitBoxOrient: "vertical",
                         overflow: "hidden",
                         textOverflow: "ellipsis",
-                        marginBottom: "20px",
+                        marginBottom: "15px",
                         flexGrow: 1
                     }}
                 >
                     {props.description}
                 </Card.Text>
 
+                {/* Tech Stack Badges */}
+                {props.techStack && (
+                    <div className="tech-badges">
+                        {props.techStack.map((tech, index) => (
+                            <span key={index} className="tech-badge">{tech}</span>
+                        ))}
+                    </div>
+                )}
+
                 <div style={{ marginTop: "auto" }}>
-                    <Button variant="primary" href={props.ghLink} target="_blank">
+                    <Button variant="primary" href={props.ghLink} target="_blank" className="project-btn">
                         <BsGithub /> &nbsp;
                         {props.isBlog ? "Blog" : "GitHub"}
                     </Button>
@@ -41,7 +53,7 @@ const ProjectCards = (props) => {
                             variant="primary"
                             href={props.demoLink}
                             target="_blank"
-                            style={{ marginLeft: "10px" }}
+                            className="project-btn demo-btn"
                         >
                             <CgWebsite /> &nbsp;
                             {"Demo"}
@@ -60,7 +72,8 @@ ProjectCards.propTypes = {
     ghLink: PropTypes.string.isRequired,
     isBlog: PropTypes.bool,
     demoLink: PropTypes.string,
-    maxLines: PropTypes.number
+    maxLines: PropTypes.number,
+    techStack: PropTypes.arrayOf(PropTypes.string)
 };
 
 export default ProjectCards;

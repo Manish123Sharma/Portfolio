@@ -15,6 +15,8 @@ import Home from './components/Home/Home';
 import Projects from './components/Projects/Projects';
 import About from './components/About/About';
 import Resume from './components/Resume/Resume';
+import Contact from './components/Contact/Contact';
+import Skills from './components/Skills/Skills';
 
 const App = () => {
     const [load, setLoad] = useState(true);
@@ -39,6 +41,8 @@ const App = () => {
                     <Route path="/project" element={<Projects />} />
                     <Route path="/about" element={<About />} />
                     <Route path="/resume" element={<Resume />} />
+                    <Route path="/contact" element={<Contact />} />
+                    <Route path="/skills" element={<Skills />} />
                     <Route path="*" element={<Navigate to="/" />} />
                 </Routes>
             </div>
