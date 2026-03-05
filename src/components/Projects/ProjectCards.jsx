@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Card from "react-bootstrap/Card";
 import Button from "react-bootstrap/Button";
 import { CgWebsite } from "react-icons/cg";
@@ -8,10 +8,28 @@ import '../../App.css';
 import '../../index.css';
 
 const ProjectCards = (props) => {
+    const [imageLoaded, setImageLoaded] = useState(false);
+
     return (
         <Card className="project-card-view">
             <div className="card-image-wrapper">
-                <Card.Img variant="top" src={props.imgPath} alt="card-img" />
+                {/* Lazy loading with skeleton */}
+                {!imageLoaded && (
+                    <div className="image-skeleton" style={{
+                        height: '250px',
+                        background: 'linear-gradient(90deg, rgba(0,217,255,0.1) 25%, rgba(199,112,240,0.1) 50%, rgba(0,217,255,0.1) 75%)',
+                        backgroundSize: '200% 100%',
+                        animation: 'shimmer 1.5s infinite'
+                    }}></div>
+                )}
+                <Card.Img 
+                    variant="top" 
+                    src={props.imgPath} 
+                    alt="card-img"
+                    loading="lazy"
+                    onLoad={() => setImageLoaded(true)}
+                    style={{ opacity: imageLoaded ? 1 : 0 }}
+                />
                 <div className="card-overlay"></div>
             </div>
             <Card.Body>

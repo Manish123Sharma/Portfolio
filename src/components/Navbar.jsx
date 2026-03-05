@@ -3,11 +3,8 @@ import Navbar from "react-bootstrap/Navbar";
 import Nav from "react-bootstrap/Nav";
 import Container from "react-bootstrap/Container";
 import Button from "react-bootstrap/Button";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { CgGitFork, CgFileDocument } from "react-icons/cg";
-// import { ImBlog } from "react-icons/im";
-import pdf from '../assets/Resume.pdf';
-
 import {
     AiFillStar,
     AiOutlineHome,
@@ -15,18 +12,21 @@ import {
     AiOutlineUser,
     AiOutlineMail,
     AiOutlineTool,
+    AiOutlineSun,
+    AiOutlineMoon
 } from "react-icons/ai";
+import { useTheme } from '../hooks/useTheme';
 import logo from "../assets/logo.png";
 
 
 const NavBar = () => {
-
     const [expand, setExpand] = useState(false);
     const [navColour, setNavColour] = useState(false);
+    const { isDarkMode, toggleTheme } = useTheme();
+    const location = useLocation();
 
     function scrollHandler() {
         if (window.scrollY >= 20) {
-            // setExpand(true);
             setNavColour(true);
         } else {
             setNavColour(false);
@@ -40,15 +40,26 @@ const NavBar = () => {
         };
     }, []);
 
+    // Get active route
+    const getActiveRoute = () => {
+        const path = location.pathname;
+        if (path === '/') return 'home';
+        return path.substring(1);
+    };
+
+    const activeRoute = getActiveRoute();
+
     return (
         <Navbar
             expanded={expand}
             fixed="top"
             expand="md"
-            className={navColour ? "sticky" : "navbar"}>
+            className={navColour ? "sticky" : "navbar"}
+        >
             <Container>
                 <Navbar.Brand href="/" className="d-flex">
-                    <img src={logo} className="img-fluid logo" alt="brand" /></Navbar.Brand>
+                    <img src={logo} className="img-fluid logo" alt="brand" />
+                </Navbar.Brand>
                 <Navbar.Toggle
                     aria-controls="responsive-navbar-nav"
                     onClick={() => {
@@ -62,7 +73,12 @@ const NavBar = () => {
                 <Navbar.Collapse id="responsive-navbar-nav">
                     <Nav className="ms-auto" defaultActiveKey="#home">
                         <Nav.Item>
-                            <Nav.Link as={Link} to="/" onClick={() => setExpand(false)}>
+                            <Nav.Link 
+                                as={Link} 
+                                to="/" 
+                                onClick={() => setExpand(false)}
+                                className={activeRoute === 'home' ? 'active-link' : ''}
+                            >
                                 <AiOutlineHome style={{ marginBottom: "2px" }} /> Home
                             </Nav.Link>
                         </Nav.Item>
@@ -72,6 +88,7 @@ const NavBar = () => {
                                 as={Link}
                                 to="/about"
                                 onClick={() => setExpand(false)}
+                                className={activeRoute === 'about' ? 'active-link' : ''}
                             >
                                 <AiOutlineUser style={{ marginBottom: "2px" }} /> About
                             </Nav.Link>
@@ -82,6 +99,7 @@ const NavBar = () => {
                                 as={Link}
                                 to="/project"
                                 onClick={() => setExpand(false)}
+                                className={activeRoute === 'project' ? 'active-link' : ''}
                             >
                                 <AiOutlineFundProjectionScreen
                                     style={{ marginBottom: "2px" }}
@@ -93,8 +111,21 @@ const NavBar = () => {
                         <Nav.Item>
                             <Nav.Link
                                 as={Link}
+                                to="/skills"
+                                onClick={() => setExpand(false)}
+                                className={activeRoute === 'skills' ? 'active-link' : ''}
+                            >
+                                <AiOutlineTool style={{ marginBottom: "2px" }} />{" "}
+                                Skills
+                            </Nav.Link>
+                        </Nav.Item>
+
+                        <Nav.Item>
+                            <Nav.Link
+                                as={Link}
                                 to="/contact"
                                 onClick={() => setExpand(false)}
+                                className={activeRoute === 'contact' ? 'active-link' : ''}
                             >
                                 <AiOutlineMail style={{ marginBottom: "2px" }} />{" "}
                                 Contact
@@ -103,28 +134,7 @@ const NavBar = () => {
 
                         <Nav.Item>
                             <Nav.Link
-                                as={Link}
-                                to="/skills"
-                                onClick={() => setExpand(false)}
-                            >
-                                <AiOutlineTool style={{ marginBottom: "2px" }} />{" "}
-                                Skills
-                            </Nav.Link>
-                        </Nav.Item>
-
-                        {/* <Nav.Item>
-                            <Nav.Link
-                                as={Link}
-                                to="/resume"
-                                onClick={() => setExpand(false)}
-                            >
-                                <CgFileDocument style={{ marginBottom: "2px" }} /> Resume
-                            </Nav.Link>
-                        </Nav.Item> */}
-
-                        <Nav.Item>
-                            <Nav.Link
-                                href={pdf}
+                                href="/src/assets/Resume.pdf"
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 onClick={() => setExpand(false)}
@@ -133,6 +143,16 @@ const NavBar = () => {
                             </Nav.Link>
                         </Nav.Item>
 
+                        {/* Theme Toggle */}
+                        <Nav.Item>
+                            <button 
+                                className="theme-toggle" 
+                                onClick={toggleTheme}
+                                aria-label="Toggle theme"
+                            >
+                                {isDarkMode ? <AiOutlineSun /> : <AiOutlineMoon />}
+                            </button>
+                        </Nav.Item>
 
                         <Nav.Item className="fork-btn">
                             <Button

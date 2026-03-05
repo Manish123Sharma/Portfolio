@@ -6,15 +6,19 @@ const Type = () => {
         <Typewriter
             options={{
                 strings: [
-                    "Software Developer",
-                    "Freelancer",
+                    "Full Stack Developer",
                     "MERN Stack Developer",
+                    "Flutter Developer",
+                    "Problem Solver",
                     "Open Source Contributor",
-                    "Flutter Developer @ Maheshwari.org",
+                    "Freelancer",
+                    "Mobile App Developer",
+                    "Backend Developer"
                 ],
                 autoStart: true,
                 loop: true,
                 deleteSpeed: 50,
+                typeSpeed: 80,
             }}
         />
     );
