@@ -12,17 +12,17 @@ import {
     AiOutlineUser,
     AiOutlineMail,
     AiOutlineTool,
-    AiOutlineSun,
-    AiOutlineMoon
+    // AiOutlineSun,
+    // AiOutlineMoon
 } from "react-icons/ai";
-import { useTheme } from '../hooks/useTheme';
+// import { useTheme } from '../hooks/useTheme';
 import logo from "../assets/logo.png";
 
 
 const NavBar = () => {
     const [expand, setExpand] = useState(false);
     const [navColour, setNavColour] = useState(false);
-    const { isDarkMode, toggleTheme } = useTheme();
+    // const { isDarkMode, toggleTheme } = useTheme();
     const location = useLocation();
 
     function scrollHandler() {
