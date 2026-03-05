@@ -143,7 +143,7 @@ const NavBar = () => {
                             </Nav.Link>
                         </Nav.Item>
 
-                        {/* Theme Toggle */}
+                        {/* Theme Toggle
                         <Nav.Item>
                             <button 
                                 className="theme-toggle" 
@@ -152,7 +152,7 @@ const NavBar = () => {
                             >
                                 {isDarkMode ? <AiOutlineSun /> : <AiOutlineMoon />}
                             </button>
-                        </Nav.Item>
+                        </Nav.Item> */}
 
                         <Nav.Item className="fork-btn">
                             <Button
