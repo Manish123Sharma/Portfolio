@@ -17,6 +17,7 @@ import {
 } from "react-icons/ai";
 // import { useTheme } from '../hooks/useTheme';
 import logo from "../assets/logo.png";
+import pdf from "../assets/Resume.pdf";
 
 
 const NavBar = () => {
@@ -134,7 +135,7 @@ const NavBar = () => {
 
                         <Nav.Item>
                             <Nav.Link
-                                href="/src/assets/Resume.pdf"
+                                href={pdf}
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 onClick={() => setExpand(false)}
