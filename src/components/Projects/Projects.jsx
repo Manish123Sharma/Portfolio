@@ -4,6 +4,9 @@ import { motion, AnimatePresence } from 'framer-motion';
 import ecomapp from "../../assets/two.png";
 import music from "../../assets/Music_app_1.jpg";
 import clubhive from "../../assets/emotion.png";
+import agarwal from "../../assets/Agarwal_Logo.png";
+import jain from "../../assets/Jain_Logo.png";
+import maheshwari from "../../assets/Maheshwari_Logo.png";
 import emart from "../../assets/leaf.png";
 import Particle from '../Particle';
 import ProjectCards from './ProjectCards';
@@ -12,6 +15,30 @@ const Projects = () => {
     const [filter, setFilter] = useState('all');
 
     const projects = [
+        {
+            imgPath: agarwal,
+            title: "Agarwal2Agarwal Matrimony",
+            description: "Agarwal2Agarwal.org Matrimony is a trusted matrimonial platform designed exclusively for the Agarwal community. The app helps individuals and families find compatible life partners through community-only profiles, advanced search filters, and several other features. I developed this app for the company, helping maintain strong cultural values and family-first matchmaking. \n Powered by Agarwal2Agarwal.org, this platform has been serving the community for many years, helping members connect with suitable matches who share similar cultural values, traditions, and family backgrounds.",
+            demoLink: "https://play.google.com/store/apps/details?id=org.agarwal2agarwal.matrimony&hl=en_US",
+            techStack: ["Flutter", "Firebase", "Dart", "Api Integration"],
+            category: "mobile"
+        },
+        {
+            imgPath: jain,
+            title: "Jain2Jain Matrimony",
+            description: "Jain2Jain.org Matrimony is a trusted matrimonial platform designed exclusively for the Jain community. The app helps individuals and families find compatible life partners through community-only profiles, advanced search filters, and several other features. I developed this app for the company, helping strengthen community matchmaking with familiar values and traditions. \n Powered by Jain2Jain.org, this platform has been serving the community for many years, helping members connect with suitable matches who share similar cultural values, traditions, and family backgrounds.",
+            demoLink: "https://play.google.com/store/apps/details?id=org.jain2jain.matrimony&hl=en_US",
+            techStack: ["Flutter", "Firebase", "Dart", "Api Integration"],
+            category: "mobile"
+        },
+        {
+            imgPath: maheshwari,
+            title: "Maheshwari.org Matrimony",
+            description: "Maheshwari.org Matrimony is a trusted matrimonial platform designed exclusively for the Maheshwari community. The app helps individuals and families find compatible life partners through community-only profiles, advanced search filters, and several other features. I developed this app for the company, helping connect families and partners with shared cultural values and traditions. \n Powered by Maheshwari.org, this platform has been serving the community for many years, helping members connect with suitable matches who share similar cultural values, traditions, and family backgrounds.",
+            demoLink: "https://play.google.com/store/apps/details?id=org.maheshwari.matrimony&hl=en_US",
+            techStack: ["Flutter", "Firebase", "Dart", "Api Integration"],
+            category: "mobile"
+        },
         {
             imgPath: clubhive,
             title: "ClubHive",

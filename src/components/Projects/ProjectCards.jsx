@@ -59,12 +59,13 @@ const ProjectCards = (props) => {
                 )}
 
                 <div style={{ marginTop: "auto" }}>
-                    <Button variant="primary" href={props.ghLink} target="_blank" className="project-btn">
-                        <BsGithub /> &nbsp;
-                        {props.isBlog ? "Blog" : "GitHub"}
-                    </Button>
-                    {"\n"}
-                    {"\n"}
+                    {props.ghLink && (
+                        <Button variant="primary" href={props.ghLink} target="_blank" className="project-btn">
+                            <BsGithub /> &nbsp;
+                            {props.isBlog ? "Blog" : "GitHub"}
+                        </Button>
+                    )}
+                    {props.ghLink && props.demoLink ? "\n\n" : null}
                     {/* If the component contains Demo link and if it's not a Blog then, it will render the below component  */}
                     {!props.isBlog && props.demoLink && (
                         <Button
@@ -87,7 +88,7 @@ ProjectCards.propTypes = {
     imgPath: PropTypes.string.isRequired,
     title: PropTypes.string.isRequired,
     description: PropTypes.string.isRequired,
-    ghLink: PropTypes.string.isRequired,
+    ghLink: PropTypes.string,
     isBlog: PropTypes.bool,
     demoLink: PropTypes.string,
     maxLines: PropTypes.number,
