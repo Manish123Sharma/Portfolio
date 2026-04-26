@@ -91,8 +91,9 @@ const Skills = () => {
             skills: [
                 { name: "Flutter", percentage: 95, icon: "📱" },
                 { name: "Firebase", percentage: 90, icon: "🔥" },
-                { name: "Git/GitHub", percentage: 85, icon: "📂" },
+                { name: "Git/GitHub", percentage: 98, icon: "📂" },
                 { name: "VS Code", percentage: 92, icon: "💻" },
+                { name: "Android Studio", percentage: 96, icon: "💻" },
             ]
         }
     ];
