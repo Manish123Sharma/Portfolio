@@ -40,25 +40,39 @@ const TimelineItem = ({ year, title, company, description, icon, delay }) => {
 const Experience = () => {
     const experiences = [
         {
-            year: "2024 - Present",
-            title: "Software Developer",
-            company: "RS Matrimonial",
-            description: "Building and maintaining full-stack applications for a matrimonial platform. Working with React, Node.js, and MongoDB to create scalable solutions.",
+            year: "May 2026 - Present",
+            title: "Software Developer I",
+            company: "Binary Chai",
+            description: "Developing and deploying cross-platform Flutter applications for Android & iOS. Building REST APIs with Node.js, implementing FCM for push notifications, and managing state with GetX, Provider, and BLoC.",
             icon: "💼"
         },
         {
-            year: "2023 - 2024",
-            title: "Full Stack Developer (Freelance)",
-            company: "Self-employed",
-            description: "Delivered multiple web and mobile applications for clients. Specialized in MERN stack and Flutter development with integrated payment solutions.",
+            year: "Nov 2025 - May 2026",
+            title: "Flutter Developer",
+            company: "RS Matrimonial",
+            description: "Developed a cross-platform matrimonial app for iOS and Android using Flutter and Dart. Integrated REST APIs, FCM, and Riverpod state management with MVC architecture.",
+            icon: "📱"
+        },
+        {
+            year: "Aug 2023 - Oct 2024",
+            title: "Flutter Developer",
+            company: "Tritan Solutions",
+            description: "Built E-commerce and Trading mobile apps serving 10,000+ users. Implemented WebSockets for real-time stock/crypto prices with <200ms latency, handling 50,000+ concurrent data streams.",
             icon: "🚀"
         },
         {
-            year: "2022 - 2023",
+            year: "Apr 2023 - May 2023",
             title: "Flutter Developer",
-            company: "Maheshwari.org",
-            description: "Developed and maintained mobile applications for the organization. Implemented new features and optimized app performance.",
+            company: "Trapthedeal",
+            description: "Developed 2 cross-platform mobile apps with Flutter and Dart. Integrated Firebase Auth, Firestore, AWS Cloud Services (S3, Lambda, EC2), and 15+ RESTful APIs.",
             icon: "📱"
+        },
+        {
+            year: "Jan 2023 - Mar 2023",
+            title: "Frontend Developer",
+            company: "Trapthedeal",
+            description: "Designed 10+ responsive web interfaces using HTML5, CSS3, JavaScript (ES6), and Bootstrap. Improved page load performance by 35% and increased user engagement by 30%.",
+            icon: "🌐"
         }
     ];
 
