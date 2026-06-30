@@ -3,9 +3,9 @@ import { Container, Row, Col, Form, Button } from "react-bootstrap";
 import emailjs from '@emailjs/browser';
 import Particle from '../Particle';
 
-const SERVICE_ID = 'mks_830';
-const TEMPLATE_ID = 'template_avkz3ke';
-const PUBLIC_KEY = '9I2eQqmVAsZAUsAss';
+const SERVICE_ID = import.meta.env.VITE_EMAILJS_SERVICE_ID;
+const TEMPLATE_ID = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
+const PUBLIC_KEY = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
 
 const Contact = () => {
     const [formData, setFormData] = useState({
