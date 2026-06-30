@@ -1,6 +1,11 @@
 import React, { useState } from 'react';
 import { Container, Row, Col, Form, Button } from "react-bootstrap";
+import emailjs from '@emailjs/browser';
 import Particle from '../Particle';
+
+const SERVICE_ID = 'mks_830';
+const TEMPLATE_ID = 'template_avkz3ke';
+const PUBLIC_KEY = '9I2eQqmVAsZAUsAss';
 
 const Contact = () => {
     const [formData, setFormData] = useState({
@@ -9,14 +14,31 @@ const Contact = () => {
         message: ''
     });
     const [submitted, setSubmitted] = useState(false);
+    const [loading, setLoading] = useState(false);
+    const [error, setError] = useState('');
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        // Create mailto link with form data
-        const subject = `Portfolio Contact from ${formData.name}`;
-        const body = `Name: ${formData.name}\nEmail: ${formData.email}\n\nMessage:\n${formData.message}`;
-        window.location.href = `mailto:mksharma256001@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-        setSubmitted(true);
+        setLoading(true);
+        setError('');
+
+        emailjs.send(
+            SERVICE_ID,
+            TEMPLATE_ID,
+            {
+                name: formData.name,
+                email: formData.email,
+                message: formData.message,
+                title: `Portfolio Contact from ${formData.name}`,
+            },
+            PUBLIC_KEY
+        ).then(() => {
+            setSubmitted(true);
+            setLoading(false);
+        }).catch(() => {
+            setError('Something went wrong. Please try again or email me directly.');
+            setLoading(false);
+        });
     };
 
     return (
@@ -35,9 +57,8 @@ const Contact = () => {
                             <Form onSubmit={handleSubmit}>
                                 {submitted ? (
                                     <div className="success-message">
-                                        <h4>Thank you for your message! 📧</h4>
-                                        <p>Your email client should have opened. If not, please email me directly at:</p>
-                                        <a href="mailto:mksharma256001@gmail.com" className="email-link">mksharma256001@gmail.com</a>
+                                        <h4>Message Sent!</h4>
+                                        <p>Thanks for reaching out. I'll get back to you soon.</p>
                                     </div>
                                 ) : (
                                     <>
@@ -75,9 +96,12 @@ const Contact = () => {
                                                 className="contact-input"
                                             />
                                         </Form.Group>
+                                        {error && (
+                                            <p style={{ color: '#ff6b6b', textAlign: 'center', marginBottom: '12px' }}>{error}</p>
+                                        )}
                                         <div className="text-center">
-                                            <Button type="submit" className="contact-btn">
-                                                Send Message
+                                            <Button type="submit" className="contact-btn" disabled={loading}>
+                                                {loading ? 'Sending...' : 'Send Message'}
                                             </Button>
                                         </div>
                                     </>
