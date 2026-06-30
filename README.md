@@ -6,7 +6,7 @@ This portfolio highlights my skills, projects, and experience as a developer, wi
 ---
 
 ## 🚀 Live Demo
-🔗 [View Portfolio](https://portfolio-five-swart-59.vercel.app/project)
+🔗 [View Portfolio](https://manishksharma.vercel.app/)
 
 ---
 
