@@ -9,7 +9,7 @@ import Type from './Type';
 
 const Home = () => {
     const navigate = useNavigate();
-    
+
     // Animation variants
     const containerVariants = {
         hidden: { opacity: 0 },
@@ -69,18 +69,18 @@ const Home = () => {
                     >
                         <Row>
                             <Col md={7} className="home-header">
-                                <motion.h1 
-                                    style={{ paddingBottom: 15 }} 
+                                <motion.h1
+                                    style={{ paddingBottom: 15 }}
                                     className="heading"
                                     variants={itemVariants}
                                 >
-                                    Hi There!{" "}
                                     <span className="wave" role="img" aria-labelledby="wave">
                                         👋🏻
-                                    </span>
+                                    </span>{" "}
+                                    Hi There!
                                 </motion.h1>
 
-                                <motion.h1 
+                                <motion.h1
                                     className="heading-name"
                                     variants={itemVariants}
                                 >
@@ -88,7 +88,7 @@ const Home = () => {
                                     <strong className="main-name"> MANISH KUMAR SHARMA</strong>
                                 </motion.h1>
 
-                                <motion.div 
+                                <motion.div
                                     style={{ padding: 50, textAlign: "left" }}
                                     variants={itemVariants}
                                 >
@@ -96,16 +96,16 @@ const Home = () => {
                                 </motion.div>
 
                                 {/* CTA Buttons */}
-                                <motion.div 
-                                    style={{ 
-                                        paddingTop: 20, 
-                                        display: 'flex', 
+                                <motion.div
+                                    style={{
+                                        paddingTop: 20,
+                                        display: 'flex',
                                         gap: '20px',
                                         flexWrap: 'wrap'
                                     }}
                                     variants={itemVariants}
                                 >
-                                    <button 
+                                    <button
                                         onClick={() => navigate('/project')}
                                         className="cta-button"
                                         style={{
@@ -121,7 +121,7 @@ const Home = () => {
                                     >
                                         View My Work
                                     </button>
-                                    <button 
+                                    <button
                                         onClick={() => navigate('/contact')}
                                         className="cta-button-secondary"
                                         style={{
