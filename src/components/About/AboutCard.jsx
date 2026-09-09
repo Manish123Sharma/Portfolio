@@ -29,7 +29,7 @@ const AboutCard = () => {
                         </li>
                     </ul>
 
-                    <p style={{ color: "rgb(155 126 172)" }}>
+                    <p style={{ color: "var(--text-muted)" }}>
                         "Strive to build things that make a difference!"{" "}
                     </p>
                     <footer className="blockquote-footer">Manish</footer>

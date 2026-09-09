@@ -12,7 +12,7 @@ const Github = () => {
                 username="Manish123Sharma"
                 blockSize={15}
                 blockMargin={5}
-                color="#c084f5"
+                color="#c05f38"
                 fontSize={16}
             />
         </Row>

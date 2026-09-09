@@ -17,7 +17,7 @@ const ProjectCards = (props) => {
                 {!imageLoaded && (
                     <div className="image-skeleton" style={{
                         height: '250px',
-                        background: 'linear-gradient(90deg, rgba(0,217,255,0.1) 25%, rgba(199,112,240,0.1) 50%, rgba(0,217,255,0.1) 75%)',
+                        background: 'linear-gradient(90deg, rgba(192,95,56,0.08) 25%, rgba(192,95,56,0.15) 50%, rgba(192,95,56,0.08) 75%)',
                         backgroundSize: '200% 100%',
                         animation: 'shimmer 1.5s infinite'
                     }}></div>

@@ -8,7 +8,6 @@ import agarwal from "../../assets/Agarwal_Logo.png";
 import jain from "../../assets/Jain_Logo.png";
 import maheshwari from "../../assets/Maheshwari_Logo.png";
 import emart from "../../assets/leaf.png";
-import Particle from '../Particle';
 import ProjectCards from './ProjectCards';
 
 const Projects = () => {
@@ -107,7 +106,6 @@ const Projects = () => {
 
     return (
         <Container fluid className="project-section">
-            <Particle />
             <Container>
                 <motion.h1 
                     className="project-heading"
@@ -136,10 +134,11 @@ const Projects = () => {
                                 onClick={() => setFilter(cat.key)}
                                 className="filter-btn"
                                 style={{
-                                    background: filter === cat.key 
-                                        ? 'linear-gradient(135deg, #00d9ff 0%, #c770f0 100%)' 
+                                    background: filter === cat.key
+                                        ? 'var(--imp-text-color)'
                                         : 'transparent',
-                                    border: '1px solid rgba(0, 217, 255, 0.3)',
+                                    border: '1px solid var(--border-color)',
+                                    color: filter === cat.key ? '#fff' : 'var(--text-primary)',
                                     padding: '8px 20px',
                                     margin: '0 5px',
                                     borderRadius: '20px',
@@ -152,7 +151,7 @@ const Projects = () => {
                     </ButtonGroup>
                 </motion.div>
 
-                <p style={{ color: "white", textAlign: 'center', marginBottom: '30px' }}>
+                <p style={{ color: "var(--text-secondary)", textAlign: 'center', marginBottom: '30px' }}>
                     Here are a few projects I've worked on recently.
                 </p>
                 

@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Container, Row, Col } from "react-bootstrap";
 import { motion } from 'framer-motion';
-import Particle from '../Particle';
 
 const SkillBar = ({ name, percentage, icon, delay }) => {
     const [width, setWidth] = useState(0);
@@ -100,7 +99,6 @@ const Skills = () => {
 
     return (
         <Container fluid className="about-section">
-            <Particle />
             <Container>
                 <motion.h1 
                     className="project-heading" 

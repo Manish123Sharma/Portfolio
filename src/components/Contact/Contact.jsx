@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { Container, Row, Col, Form, Button } from "react-bootstrap";
 import emailjs from '@emailjs/browser';
-import Particle from '../Particle';
 
 const SERVICE_ID = import.meta.env.VITE_EMAILJS_SERVICE_ID;
 const TEMPLATE_ID = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
@@ -43,7 +42,6 @@ const Contact = () => {
 
     return (
         <Container fluid className="about-section">
-            <Particle />
             <Container>
                 <h1 className="project-heading" style={{ textAlign: 'center', marginBottom: '40px' }}>
                     Get In <strong className="purple">Touch</strong>
@@ -51,7 +49,7 @@ const Contact = () => {
                 <Row style={{ justifyContent: 'center' }}>
                     <Col md={8} lg={6}>
                         <div className="contact-card">
-                            <p style={{ textAlign: 'center', color: 'rgba(255,255,255,0.7)', marginBottom: '30px' }}>
+                            <p style={{ textAlign: 'center', color: 'var(--text-secondary)', marginBottom: '30px' }}>
                                 Have a project in mind or want to collaborate? Feel free to reach out!
                             </p>
                             <Form onSubmit={handleSubmit}>
@@ -97,7 +95,7 @@ const Contact = () => {
                                             />
                                         </Form.Group>
                                         {error && (
-                                            <p style={{ color: '#ff6b6b', textAlign: 'center', marginBottom: '12px' }}>{error}</p>
+                                            <p style={{ color: '#b5432f', textAlign: 'center', marginBottom: '12px' }}>{error}</p>
                                         )}
                                         <div className="text-center">
                                             <Button type="submit" className="contact-btn" disabled={loading}>
@@ -113,32 +111,29 @@ const Contact = () => {
                 
                 <Row style={{ justifyContent: 'center', marginTop: '50px' }}>
                     <Col md={12} style={{ textAlign: 'center' }}>
-                        <h3 style={{ color: 'white', marginBottom: '20px' }}>Other Ways to Connect</h3>
+                        <h3 style={{ color: 'var(--text-primary)', marginBottom: '20px', fontFamily: '"Playfair Display", Georgia, serif' }}>Other Ways to Connect</h3>
                         <div className="social-links">
-                            <a 
-                                href="https://github.com/Manish123Sharma" 
-                                target="_blank" 
-                                rel="noopener noreferrer" 
+                            <a
+                                href="https://github.com/Manish123Sharma"
+                                target="_blank"
+                                rel="noopener noreferrer"
                                 className="social-link"
-                                style={{ color: 'white', textDecoration: 'none' }}
                             >
                                 GitHub
                             </a>
-                            <a 
-                                href="https://www.linkedin.com/in/mks001/" 
-                                target="_blank" 
-                                rel="noopener noreferrer" 
+                            <a
+                                href="https://www.linkedin.com/in/mks001/"
+                                target="_blank"
+                                rel="noopener noreferrer"
                                 className="social-link"
-                                style={{ color: 'white', textDecoration: 'none' }}
                             >
                                 LinkedIn
                             </a>
-                            <a 
-                                href="https://instagram.com/mks_830" 
-                                target="_blank" 
-                                rel="noopener noreferrer" 
+                            <a
+                                href="https://instagram.com/mks_830"
+                                target="_blank"
+                                rel="noopener noreferrer"
                                 className="social-link"
-                                style={{ color: 'white', textDecoration: 'none' }}
                             >
                                 Instagram
                             </a>

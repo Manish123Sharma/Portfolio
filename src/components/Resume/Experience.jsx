@@ -1,7 +1,6 @@
 import React from 'react';
 import { Container, Row, Col } from "react-bootstrap";
 import { motion } from 'framer-motion';
-import Particle from '../Particle';
 
 // Animation hook component
 const AnimatedSection = ({ children, delay = 0 }) => {
@@ -95,7 +94,6 @@ const Experience = () => {
 
     return (
         <Container fluid className="about-section">
-            <Particle />
             <Container>
                 <motion.h1 
                     className="project-heading" 
@@ -110,7 +108,7 @@ const Experience = () => {
                 <Row>
                     <Col md={6}>
                         <AnimatedSection>
-                            <h2 className="section-title" style={{ color: '#00d9ff', marginBottom: '30px' }}>
+                            <h2 className="section-title" style={{ color: 'var(--imp-text-color)', marginBottom: '30px' }}>
                                 💼 Work Experience
                             </h2>
                             <div className="timeline">
@@ -130,7 +128,7 @@ const Experience = () => {
                     </Col>
                     <Col md={6}>
                         <AnimatedSection delay={0.3}>
-                            <h2 className="section-title" style={{ color: '#c770f0', marginBottom: '30px', marginTop: '30px' }}>
+                            <h2 className="section-title" style={{ color: 'var(--secondary-color)', marginBottom: '30px', marginTop: '30px' }}>
                                 🎓 Education
                             </h2>
                             <div className="timeline">

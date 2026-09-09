@@ -3,7 +3,6 @@ import { Container, Row, Col } from "react-bootstrap";
 import { useNavigate } from "react-router-dom";
 import { motion } from 'framer-motion';
 import homeLogo from "../../assets/home-main.svg";
-import Particle from '../Particle';
 import Home2 from './Home2';
 import Type from './Type';
 
@@ -60,7 +59,6 @@ const Home = () => {
     return (
         <section>
             <Container fluid className="home-section" id="home">
-                <Particle />
                 <Container className="home-content">
                     <motion.div
                         variants={containerVariants}
@@ -109,14 +107,14 @@ const Home = () => {
                                         onClick={() => navigate('/project')}
                                         className="cta-button"
                                         style={{
-                                            background: 'linear-gradient(135deg, #00d9ff 0%, #c770f0 100%)',
+                                            background: 'var(--imp-text-color)',
                                             border: 'none',
                                             padding: '12px 30px',
                                             fontSize: '1.1rem',
                                             fontWeight: 600,
                                             borderRadius: '30px',
                                             cursor: 'pointer',
-                                            color: 'white'
+                                            color: '#fff'
                                         }}
                                     >
                                         View My Work
@@ -126,12 +124,12 @@ const Home = () => {
                                         className="cta-button-secondary"
                                         style={{
                                             background: 'transparent',
-                                            border: '2px solid #00d9ff',
+                                            border: '2px solid var(--imp-text-color)',
                                             padding: '10px 28px',
                                             fontSize: '1.1rem',
                                             fontWeight: 600,
                                             borderRadius: '30px',
-                                            color: '#00d9ff',
+                                            color: 'var(--imp-text-color)',
                                             cursor: 'pointer',
                                             transition: 'all 0.3s ease'
                                         }}

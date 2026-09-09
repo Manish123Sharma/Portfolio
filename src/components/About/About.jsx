@@ -3,7 +3,6 @@ import { Container, Row, Col } from "react-bootstrap";
 import { useNavigate } from "react-router-dom";
 import { motion } from 'framer-motion';
 import laptopImg from "../../assets/about.png";
-import Particle from '../Particle';
 import AboutCard from './AboutCard';
 import TechStack from './TechStack';
 import ToolStack from './ToolStack';
@@ -36,7 +35,6 @@ const About = () => {
 
     return (
         <Container fluid className="about-section">
-            <Particle />
             <Container>
                 <motion.div
                     variants={containerVariants}
@@ -70,20 +68,20 @@ const About = () => {
                                 }}
                                 variants={itemVariants}
                             >
-                                <button 
+                                <button
                                     onClick={() => navigate('/contact')}
                                     className="hire-me-btn"
                                     style={{
-                                        background: 'linear-gradient(135deg, #00d9ff 0%, #c770f0 100%)',
+                                        background: 'var(--imp-text-color)',
                                         border: 'none',
                                         padding: '15px 40px',
                                         fontSize: '1.2rem',
                                         fontWeight: 600,
                                         borderRadius: '30px',
-                                        boxShadow: '0 5px 20px rgba(0, 217, 255, 0.3)',
+                                        boxShadow: '0 5px 20px var(--glow-color)',
                                         transition: 'all 0.3s ease',
                                         cursor: 'pointer',
-                                        color: 'white'
+                                        color: '#fff'
                                     }}
                                 >
                                     Hire Me 💼
