@@ -164,7 +164,7 @@ function App() {
               <div className="contact-kicker">05 — CONTACT</div>
               <h2>Tell me what you're<br /><span>trying to build.</span></h2>
               <p>A rough idea is enough to start. I'll reply within a day with honest thoughts on scope, timeline and whether I'm the right person for it.</p>
-              <div className="contact-meta"><div><span>Email</span> hello@manishksharma.dev</div><div><span>Based</span> Noida, India · IST (UTC+5:30)</div></div>
+              <div className="contact-meta"><div><span>Email</span> mksharma256001@gmail.com</div><div><span>Based</span> Noida, India · IST (UTC+5:30)</div></div>
             </div>
             <form className="contact-form" onSubmit={handleSubmit} data-reveal data-reveal-delay="140">
               {sent ? <div className="form-success"><div>Thanks — I'll be in touch.</div><p>Your message has been sent successfully.</p></div> : <>
