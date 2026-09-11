@@ -74,9 +74,9 @@ const NavBar = () => {
                 <Navbar.Collapse id="responsive-navbar-nav">
                     <Nav className="ms-auto" defaultActiveKey="#home">
                         <Nav.Item>
-                            <Nav.Link 
-                                as={Link} 
-                                to="/" 
+                            <Nav.Link
+                                as={Link}
+                                to="/"
                                 onClick={() => setExpand(false)}
                                 className={activeRoute === 'home' ? 'active-link' : ''}
                             >

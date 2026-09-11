@@ -12,7 +12,7 @@ export const ThemeProvider = ({ children }) => {
   useEffect(() => {
     // Save theme preference to localStorage
     localStorage.setItem('portfolio-theme', isDarkMode ? 'dark' : 'light');
-    
+
     // Apply theme to document
     document.documentElement.setAttribute('data-theme', isDarkMode ? 'dark' : 'light');
   }, [isDarkMode]);

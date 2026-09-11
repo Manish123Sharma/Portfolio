@@ -10,7 +10,7 @@ import Github from './Github';
 
 const About = () => {
     const navigate = useNavigate();
-    
+
     // Animation variants
     const containerVariants = {
         hidden: { opacity: 0 },
@@ -50,7 +50,7 @@ const About = () => {
                                 paddingBottom: "50px",
                             }}
                         >
-                            <motion.h1 
+                            <motion.h1
                                 style={{ fontSize: "2.1em", paddingBottom: "20px" }}
                                 variants={itemVariants}
                             >
@@ -59,12 +59,12 @@ const About = () => {
                             <motion.div variants={itemVariants}>
                                 <AboutCard />
                             </motion.div>
-                            
+
                             {/* Hire Me CTA */}
-                            <motion.div 
-                                style={{ 
-                                    marginTop: '30px', 
-                                    textAlign: 'center' 
+                            <motion.div
+                                style={{
+                                    marginTop: '30px',
+                                    textAlign: 'center'
                                 }}
                                 variants={itemVariants}
                             >
@@ -93,9 +93,9 @@ const About = () => {
                             style={{ paddingTop: "120px", paddingBottom: "50px" }}
                             className="about-img"
                         >
-                            <motion.img 
-                                src={laptopImg} 
-                                alt="about" 
+                            <motion.img
+                                src={laptopImg}
+                                alt="about"
                                 className="img-fluid"
                                 variants={itemVariants}
                                 initial="hidden"
@@ -106,7 +106,7 @@ const About = () => {
                         </Col>
                     </Row>
 
-                    <motion.h1 
+                    <motion.h1
                         className="project-heading"
                         variants={itemVariants}
                     >
@@ -115,8 +115,8 @@ const About = () => {
                     <motion.div variants={itemVariants}>
                         <TechStack />
                     </motion.div>
-                    
-                    <motion.h1 
+
+                    <motion.h1
                         className="project-heading"
                         variants={itemVariants}
                     >
@@ -125,7 +125,7 @@ const About = () => {
                     <motion.div variants={itemVariants}>
                         <ToolStack />
                     </motion.div>
-                    
+
                     <motion.div variants={itemVariants}>
                         <Github />
                     </motion.div>

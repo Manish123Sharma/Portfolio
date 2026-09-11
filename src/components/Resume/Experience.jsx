@@ -18,7 +18,7 @@ const AnimatedSection = ({ children, delay = 0 }) => {
 
 const TimelineItem = ({ year, title, company, description, icon, delay }) => {
     return (
-        <motion.div 
+        <motion.div
             className="timeline-item"
             initial={{ opacity: 0, x: -50 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -95,8 +95,8 @@ const Experience = () => {
     return (
         <Container fluid className="about-section">
             <Container>
-                <motion.h1 
-                    className="project-heading" 
+                <motion.h1
+                    className="project-heading"
                     style={{ textAlign: 'center', marginBottom: '60px' }}
                     initial={{ opacity: 0, y: -20 }}
                     whileInView={{ opacity: 1, y: 0 }}
@@ -113,7 +113,7 @@ const Experience = () => {
                             </h2>
                             <div className="timeline">
                                 {experiences.map((exp, index) => (
-                                    <TimelineItem 
+                                    <TimelineItem
                                         key={index}
                                         year={exp.year}
                                         title={exp.title}
@@ -133,7 +133,7 @@ const Experience = () => {
                             </h2>
                             <div className="timeline">
                                 {education.map((edu, index) => (
-                                    <TimelineItem 
+                                    <TimelineItem
                                         key={index}
                                         year={edu.year}
                                         title={edu.title}

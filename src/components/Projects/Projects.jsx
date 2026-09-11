@@ -79,8 +79,8 @@ const Projects = () => {
         { key: 'mobile', label: 'Mobile' }
     ];
 
-    const filteredProjects = filter === 'all' 
-        ? projects 
+    const filteredProjects = filter === 'all'
+        ? projects
         : projects.filter(p => p.category === filter);
 
     const containerVariants = {
@@ -107,7 +107,7 @@ const Projects = () => {
     return (
         <Container fluid className="project-section">
             <Container>
-                <motion.h1 
+                <motion.h1
                     className="project-heading"
                     initial={{ opacity: 0, y: -20 }}
                     animate={{ opacity: 1, y: 0 }}
@@ -115,12 +115,12 @@ const Projects = () => {
                 >
                     My Recent <strong className="purple">Works </strong>
                 </motion.h1>
-                
+
                 {/* Filter Buttons */}
-                <motion.div 
-                    style={{ 
-                        textAlign: 'center', 
-                        marginBottom: '40px' 
+                <motion.div
+                    style={{
+                        textAlign: 'center',
+                        marginBottom: '40px'
                     }}
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
@@ -154,7 +154,7 @@ const Projects = () => {
                 <p style={{ color: "var(--text-secondary)", textAlign: 'center', marginBottom: '30px' }}>
                     Here are a few projects I've worked on recently.
                 </p>
-                
+
                 <motion.div
                     variants={containerVariants}
                     initial="hidden"

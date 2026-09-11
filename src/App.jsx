@@ -33,7 +33,7 @@ const process = [
   { num: "04", title: "Launch and handover", body: "Deployed, documented and yours. Two weeks of fixes included, and I am around afterwards if you want me to be." },
 ];
 
-const stats = [["5+", "Years building"], ["3", "Platforms shipped"], ["Web + iOS + Android", "One developer"], ["< 1 day", "Reply time"]];
+const stats = [["3+", "Years building"], ["3", "Platforms shipped"], ["Web + iOS + Android", "One developer"], ["< 1 day", "Reply time"]];
 
 function SectionTitle({ number, children }) {
   return <div className="section-title"><span>{number}</span><h2>{children}</h2></div>;
@@ -122,7 +122,7 @@ function App() {
           </div>
         </section>
 
-        <div className="ticker" aria-label="Technology list"><div className="ticker-track">{[0,1].map((run) => <div className="ticker-run" key={run}>{tech.map((item) => <span key={`${run}-${item}`}>{item}<i /></span>)}</div>)}</div></div>
+        <div className="ticker" aria-label="Technology list"><div className="ticker-track">{[0, 1].map((run) => <div className="ticker-run" key={run}>{tech.map((item) => <span key={`${run}-${item}`}>{item}<i /></span>)}</div>)}</div></div>
 
         <section id="services" className="editorial-shell section">
           <SectionTitle number="01">What I build</SectionTitle>

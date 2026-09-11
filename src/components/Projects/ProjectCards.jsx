@@ -22,9 +22,9 @@ const ProjectCards = (props) => {
                         animation: 'shimmer 1.5s infinite'
                     }}></div>
                 )}
-                <Card.Img 
-                    variant="top" 
-                    src={props.imgPath} 
+                <Card.Img
+                    variant="top"
+                    src={props.imgPath}
                     alt="card-img"
                     loading="lazy"
                     onLoad={() => setImageLoaded(true)}

@@ -66,7 +66,7 @@ const Contact = () => {
                                                 placeholder="Your Name"
                                                 name="name"
                                                 value={formData.name}
-                                                onChange={(e) => setFormData({...formData, name: e.target.value})}
+                                                onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                                                 required
                                                 className="contact-input"
                                             />
@@ -77,7 +77,7 @@ const Contact = () => {
                                                 placeholder="Your Email"
                                                 name="email"
                                                 value={formData.email}
-                                                onChange={(e) => setFormData({...formData, email: e.target.value})}
+                                                onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                                                 required
                                                 className="contact-input"
                                             />
@@ -89,7 +89,7 @@ const Contact = () => {
                                                 placeholder="Your Message"
                                                 name="message"
                                                 value={formData.message}
-                                                onChange={(e) => setFormData({...formData, message: e.target.value})}
+                                                onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                                                 required
                                                 className="contact-input"
                                             />
@@ -108,7 +108,7 @@ const Contact = () => {
                         </div>
                     </Col>
                 </Row>
-                
+
                 <Row style={{ justifyContent: 'center', marginTop: '50px' }}>
                     <Col md={12} style={{ textAlign: 'center' }}>
                         <h3 style={{ color: 'var(--text-primary)', marginBottom: '20px', fontFamily: '"Playfair Display", Georgia, serif' }}>Other Ways to Connect</h3>

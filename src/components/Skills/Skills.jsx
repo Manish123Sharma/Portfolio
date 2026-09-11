@@ -5,7 +5,7 @@ import { motion } from 'framer-motion';
 const SkillBar = ({ name, percentage, icon, delay }) => {
     const [width, setWidth] = useState(0);
     const [isVisible, setIsVisible] = useState(false);
-    
+
     useEffect(() => {
         // Trigger animation when component mounts
         const timer = setTimeout(() => {
@@ -16,7 +16,7 @@ const SkillBar = ({ name, percentage, icon, delay }) => {
     }, [percentage]);
 
     return (
-        <motion.div 
+        <motion.div
             className="skill-item"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 20 }}
@@ -28,8 +28,8 @@ const SkillBar = ({ name, percentage, icon, delay }) => {
                 <span className="skill-percentage">{percentage}%</span>
             </div>
             <div className="skill-bar-container">
-                <motion.div 
-                    className="skill-bar-fill" 
+                <motion.div
+                    className="skill-bar-fill"
                     initial={{ width: 0 }}
                     animate={{ width: `${width}%` }}
                     transition={{ duration: 1.5, ease: "easeOut", delay: delay + 0.2 }}
@@ -43,7 +43,7 @@ const SkillBar = ({ name, percentage, icon, delay }) => {
 
 const SkillCard = ({ category, skills, delay }) => {
     return (
-        <motion.div 
+        <motion.div
             className="skill-category-card"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
@@ -52,7 +52,7 @@ const SkillCard = ({ category, skills, delay }) => {
             <h3 className="skill-category-title">{category}</h3>
             <div className="skill-category-items">
                 {skills.map((skill, index) => (
-                    <SkillBar 
+                    <SkillBar
                         key={index}
                         name={skill.name}
                         percentage={skill.percentage}
@@ -100,8 +100,8 @@ const Skills = () => {
     return (
         <Container fluid className="about-section">
             <Container>
-                <motion.h1 
-                    className="project-heading" 
+                <motion.h1
+                    className="project-heading"
                     style={{ textAlign: 'center', marginBottom: '50px' }}
                     initial={{ opacity: 0, y: -20 }}
                     animate={{ opacity: 1, y: 0 }}
@@ -113,7 +113,7 @@ const Skills = () => {
                     <Col md={12} lg={10}>
                         <div className="skills-grid">
                             {skillCategories.map((category, index) => (
-                                <SkillCard 
+                                <SkillCard
                                     key={index}
                                     category={category.category}
                                     skills={category.skills}
