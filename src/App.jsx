@@ -8,6 +8,7 @@ import emailjs from "@emailjs/browser";
 import agarwal from "./assets/Agarwal_Logo.png";
 import jain from "./assets/Jain_Logo.png";
 import maheshwari from "./assets/Maheshwari_Logo.png";
+import gtp from "./assets/gtp.svg";
 import resume from "./assets/Resume.pdf";
 import portrait from "./assets/about.png";
 
@@ -21,9 +22,10 @@ const services = [
 ];
 
 const projects = [
-  { name: "Agarwal2Agarwal Matrimony", year: "2025", image: agarwal, body: "A matrimonial platform for the Agarwal community: profile creation, gotra-aware matching, verification workflows and a moderation dashboard, plus a companion mobile app.", stack: ["React", "Node.js", "MongoDB", "Flutter"] },
-  { name: "Jain2Jain Matrimony", year: "2025", image: jain, body: "Built for the Jain community, with community-specific filters, family-led search, chat between matched families and a paid membership tier.", stack: ["React", "Express", "MongoDB", "Flutter"] },
-  { name: "Maheshwari.org Matrimony", year: "2024", image: maheshwari, body: "The third platform on the same foundation — reusing the shared core let this one launch in weeks rather than months, with its own branding and rules.", stack: ["MERN", "Flutter", "REST APIs"] },
+  { name: "Agarwal2Agarwal Matrimony", year: "2026", image: agarwal, body: "A matrimonial platform for the Agarwal community: profile creation, gotra-aware matching, verification workflows and a moderation dashboard, plus a companion mobile app.", stack: ["React", "Node.js", "MongoDB", "Flutter"], playStore: "https://play.google.com/store/apps/details?id=org.agarwal2agarwal.matrimony&hl=en_IN" },
+  { name: "Jain2Jain Matrimony", year: "2026", image: jain, body: "Built for the Jain community, with community-specific filters, family-led search, chat between matched families and a paid membership tier.", stack: ["React", "Express", "MongoDB", "Flutter"], playStore: "https://play.google.com/store/apps/details?id=org.jain2jain.matrimony&hl=en_IN" },
+  { name: "Maheshwari.org Matrimony", year: "2026", image: maheshwari, body: "The third platform on the same foundation — reusing the shared core let this one launch in weeks rather than months, with its own branding and rules.", stack: ["MERN", "Flutter", "REST APIs"], playStore: "https://play.google.com/store/apps/details?id=org.maheshwari.matrimony&hl=en_IN" },
+  { name: "Good Times Partnership", year: "2026", image: gtp, body: "An engagement and rewards app for UBL's retail partners: partners enroll in the program, track their sales performance and earn rewards, built as a Flutter app for iOS and Android.", stack: ["Flutter", "Dart", "REST APIs"], playStore: "https://play.google.com/store/apps/details?id=com.fourmm.GoodTimesPartnerUB&hl=en_IN", appStore: "https://apps.apple.com/in/app/good-times-partner/id6636486399" },
 ];
 
 const process = [
@@ -33,7 +35,7 @@ const process = [
   { num: "04", title: "Launch and handover", body: "Deployed, documented and yours. Two weeks of fixes included, and I am around afterwards if you want me to be." },
 ];
 
-const stats = [["3+", "Years building"], ["3", "Platforms shipped"], ["Web + iOS + Android", "One developer"], ["< 1 day", "Reply time"]];
+const stats = [["3+", "Years building"], [String(projects.length), "Platforms shipped"], ["Web + iOS + Android", "One developer"], ["< 1 day", "Reply time"]];
 
 function SectionTitle({ number, children }) {
   return <div className="section-title"><span>{number}</span><h2>{children}</h2></div>;
@@ -130,8 +132,8 @@ function App() {
         </section>
 
         <section id="work" className="editorial-shell section">
-          <div className="work-intro" data-reveal><SectionTitle number="02">Selected work</SectionTitle><p>Three community matrimony platforms — web app, admin tooling and a Flutter mobile app for each, built and maintained end to end.</p></div>
-          <div className="project-grid">{projects.map((project) => <article className="project-card" data-reveal key={project.name}><div className="project-image"><img src={project.image} alt="" /></div><div className="project-body"><div className="project-heading-row"><h3>{project.name}</h3><span>{project.year}</span></div><p>{project.body}</p><div className="tags">{project.stack.map((item) => <span key={item}>{item}</span>)}</div></div></article>)}</div>
+          <div className="work-intro" data-reveal><SectionTitle number="02">Selected work</SectionTitle><p>Web apps and Flutter mobile apps built and maintained end to end, from admin tooling to the app store release itself.</p></div>
+          <div className="project-grid">{projects.map((project) => <article className="project-card" data-reveal key={project.name}><div className="project-image"><img src={project.image} alt="" /></div><div className="project-body"><div className="project-heading-row"><h3>{project.name}</h3><span>{project.year}</span></div><p>{project.body}</p><div className="tags">{project.stack.map((item) => <span key={item}>{item}</span>)}</div>{(project.playStore || project.appStore) && <div className="project-links">{project.playStore && <a href={project.playStore} target="_blank" rel="noreferrer">Play Store <FiArrowUpRight /></a>}{project.appStore && <a href={project.appStore} target="_blank" rel="noreferrer">App Store <FiArrowUpRight /></a>}</div>}</div></article>)}</div>
         </section>
 
         <section id="process" className="editorial-shell section">

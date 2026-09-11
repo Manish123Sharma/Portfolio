@@ -153,20 +153,20 @@ a {
     align-items: center;
     gap: 9px;
     padding: 7px 15px 7px 12px;
-    border: 1px solid rgba(80, 178, 148, .42);
+    border: 1px solid rgba(76, 196, 23, .55);
     border-radius: 999px;
     font: 12px "JetBrains Mono", monospace;
     letter-spacing: .02em;
-    color: #337f68;
-    background: rgba(80, 178, 148, .07)
+    color: #3fa312;
+    background: rgba(76, 196, 23, .1)
 }
 
 .availability span {
     width: 8px;
     height: 8px;
     border-radius: 50%;
-    background: var(--green);
-    animation: pulse 2.2s infinite
+    background: #8a8a8a;
+    animation: dot-pulse 1.8s ease-in-out infinite
 }
 
 .hero-title {
@@ -487,6 +487,29 @@ a {
     background: rgba(36, 29, 24, .055);
     color: #5c534d;
     font: 11px "JetBrains Mono", monospace
+}
+
+.project-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding-top: 4px
+}
+
+.project-links a {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 13px;
+    font-weight: 500;
+    color: inherit;
+    border-bottom: 1px solid rgba(36, 29, 24, .22);
+    transition: .28s
+}
+
+.project-links a:hover {
+    border-color: rgba(200, 100, 56, .6);
+    color: #c86438
 }
 
 .process-grid {
@@ -825,6 +848,20 @@ a {
 
     50% {
         transform: translate3d(0, 12px, 0)
+    }
+}
+
+@keyframes dot-pulse {
+
+    0%,
+    100% {
+        background: #8a8a8a;
+        transform: scale(1)
+    }
+
+    50% {
+        background: #4cc417;
+        transform: scale(1.15)
     }
 }
 
