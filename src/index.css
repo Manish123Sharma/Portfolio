@@ -805,7 +805,7 @@ button:focus {
     opacity: 0.95 !important;
     border-radius: 12px !important;
     height: 250px !important;
-    object-fit: cover !important;
+    object-fit: contain !important;
     transition: all 0.5s ease !important;
     background: rgba(192, 95, 56, 0.06);
 }

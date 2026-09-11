@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import Card from "react-bootstrap/Card";
 import Button from "react-bootstrap/Button";
 import { CgWebsite } from "react-icons/cg";
-import { BsGithub } from "react-icons/bs";
+import { BsGithub, BsApple } from "react-icons/bs";
 import PropTypes from "prop-types";
 import '../../App.css';
 import '../../index.css';
@@ -58,14 +58,13 @@ const ProjectCards = (props) => {
                     </div>
                 )}
 
-                <div style={{ marginTop: "auto" }}>
+                <div style={{ marginTop: "auto", display: "flex", flexWrap: "wrap", gap: "10px" }}>
                     {props.ghLink && (
                         <Button variant="primary" href={props.ghLink} target="_blank" className="project-btn">
                             <BsGithub /> &nbsp;
                             {props.isBlog ? "Blog" : "GitHub"}
                         </Button>
                     )}
-                    {props.ghLink && props.demoLink ? "\n\n" : null}
                     {/* If the component contains Demo link and if it's not a Blog then, it will render the below component  */}
                     {!props.isBlog && props.demoLink && (
                         <Button
@@ -75,7 +74,18 @@ const ProjectCards = (props) => {
                             className="project-btn demo-btn"
                         >
                             <CgWebsite /> &nbsp;
-                            {"Demo"}
+                            {props.demoLink.includes("play.google.com") ? "Play Store" : "Demo"}
+                        </Button>
+                    )}
+                    {props.appLink && (
+                        <Button
+                            variant="primary"
+                            href={props.appLink}
+                            target="_blank"
+                            className="project-btn demo-btn"
+                        >
+                            <BsApple /> &nbsp;
+                            {"App Store"}
                         </Button>
                     )}
                 </div>
@@ -91,6 +101,7 @@ ProjectCards.propTypes = {
     ghLink: PropTypes.string,
     isBlog: PropTypes.bool,
     demoLink: PropTypes.string,
+    appLink: PropTypes.string,
     maxLines: PropTypes.number,
     techStack: PropTypes.arrayOf(PropTypes.string)
 };

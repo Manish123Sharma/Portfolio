@@ -1,87 +1,44 @@
-import React, { useState } from 'react';
-import { Container, Row, Col, Button, ButtonGroup } from "react-bootstrap";
+import React from 'react';
+import { Container, Row, Col } from "react-bootstrap";
 import { motion, AnimatePresence } from 'framer-motion';
-import ecomapp from "../../assets/two.png";
-import music from "../../assets/Music_app_1.jpg";
-import clubhive from "../../assets/emotion.png";
 import agarwal from "../../assets/Agarwal_Logo.png";
 import jain from "../../assets/Jain_Logo.png";
 import maheshwari from "../../assets/Maheshwari_Logo.png";
-import emart from "../../assets/leaf.png";
+import gtp from "../../assets/gtp.svg";
 import ProjectCards from './ProjectCards';
 
 const Projects = () => {
-    const [filter, setFilter] = useState('all');
-
     const projects = [
         {
             imgPath: agarwal,
             title: "Agarwal2Agarwal Matrimony",
             description: "Agarwal2Agarwal.org Matrimony is a trusted matrimonial platform designed exclusively for the Agarwal community. The app helps individuals and families find compatible life partners through community-only profiles, advanced search filters, and several other features. I developed this app for the company, helping maintain strong cultural values and family-first matchmaking. \n Powered by Agarwal2Agarwal.org, this platform has been serving the community for many years, helping members connect with suitable matches who share similar cultural values, traditions, and family backgrounds.",
-            demoLink: "https://play.google.com/store/apps/details?id=org.agarwal2agarwal.matrimony&hl=en_US",
-            techStack: ["Flutter", "Firebase", "Dart", "Api Integration"],
-            category: "mobile"
+            demoLink: "https://play.google.com/store/apps/details?id=org.agarwal2agarwal.matrimony&hl=en_IN",
+            techStack: ["Flutter", "Firebase", "Dart", "Api Integration"]
         },
         {
             imgPath: jain,
             title: "Jain2Jain Matrimony",
             description: "Jain2Jain.org Matrimony is a trusted matrimonial platform designed exclusively for the Jain community. The app helps individuals and families find compatible life partners through community-only profiles, advanced search filters, and several other features. I developed this app for the company, helping strengthen community matchmaking with familiar values and traditions. \n Powered by Jain2Jain.org, this platform has been serving the community for many years, helping members connect with suitable matches who share similar cultural values, traditions, and family backgrounds.",
-            demoLink: "https://play.google.com/store/apps/details?id=org.jain2jain.matrimony&hl=en_US",
-            techStack: ["Flutter", "Firebase", "Dart", "Api Integration"],
-            category: "mobile"
+            demoLink: "https://play.google.com/store/apps/details?id=org.jain2jain.matrimony&hl=en_IN",
+            techStack: ["Flutter", "Firebase", "Dart", "Api Integration"]
         },
         {
             imgPath: maheshwari,
             title: "Maheshwari.org Matrimony",
             description: "Maheshwari.org Matrimony is a trusted matrimonial platform designed exclusively for the Maheshwari community. The app helps individuals and families find compatible life partners through community-only profiles, advanced search filters, and several other features. I developed this app for the company, helping connect families and partners with shared cultural values and traditions. \n Powered by Maheshwari.org, this platform has been serving the community for many years, helping members connect with suitable matches who share similar cultural values, traditions, and family backgrounds.",
-            demoLink: "https://play.google.com/store/apps/details?id=org.maheshwari.matrimony&hl=en_US",
-            techStack: ["Flutter", "Firebase", "Dart", "Api Integration"],
-            category: "mobile"
+            demoLink: "https://play.google.com/store/apps/details?id=org.maheshwari.matrimony&hl=en_IN",
+            techStack: ["Flutter", "Firebase", "Dart", "Api Integration"]
         },
         {
-            imgPath: clubhive,
-            title: "ClubHive",
-            description: "Full-stack event management platform with secure authentication, role-based access, and integrated payment processing. Features event browsing, filtering, RSVP functionality, chat groups, and Google Maps integration for location visualization.",
-            ghLink: "https://github.com/Manish123Sharma/ClubHive-Web",
-            techStack: ["React", "Node.js", "MongoDB", "Payment Gateway"],
-            category: "fullstack"
-        },
-        {
-            imgPath: emart,
-            title: "Electronics Mart",
-            description: "Full-featured electronics e-commerce platform with secure authentication, product browsing, search, filtering, and cart management. Admin panel includes 2FA and comprehensive dashboard with analytics on users, sales, and orders.",
-            ghLink: "https://github.com/Manish123Sharma/E-Mart",
-            demoLink: "https://electronicsmartapi.github.io/",
-            techStack: ["React", "Node.js", "MongoDB", "Firebase"],
-            category: "fullstack"
-        },
-        {
-            imgPath: music,
-            title: "Music App",
-            description: "Sleek music streaming app using iTunes API for real-time discovery, search, and playback. Features include album art display, custom audio player with full controls, responsive UI, lazy loading, and optimized API handling.",
-            ghLink: "https://github.com/Manish123Sharma/Projects/tree/main/music_app",
-            techStack: ["Flutter", "iTunes API", "Dart"],
-            category: "mobile"
-        },
-        {
-            imgPath: ecomapp,
-            title: "E-Commerce Mobile App",
-            description: "Flutter-based multi-role e-commerce app with Firebase backend and REST APIs. Features product browsing, Razorpay checkout, order tracking for buyers, and product/revenue management for sellers with real-time FCM notifications.",
-            ghLink: "https://github.com/Manish123Sharma/Projects/tree/main/e_commerce_app_1",
-            techStack: ["Flutter", "Firebase", "Razorpay", "REST API"],
-            category: "mobile"
+            imgPath: gtp,
+            title: "Good Times Partnership",
+            description: "Welcome to Good Times Partnership – an engagement program for the UBL retail partners. The app is designed to encourage and reward the partners for their efforts in sales. The partners can participate by enrolling in the program on the app. \n Download now and start earning rewards for your performance smoothly!",
+            demoLink: "https://play.google.com/store/apps/details?id=com.fourmm.GoodTimesPartnerUB&hl=en_IN",
+            appLink: "https://apps.apple.com/in/app/good-times-partner/id6636486399",
+            techStack: ["Flutter", "Dart", "REST APIs"]
         }
     ];
-
-    const categories = [
-        { key: 'all', label: 'All Projects' },
-        { key: 'fullstack', label: 'Full Stack' },
-        { key: 'mobile', label: 'Mobile' }
-    ];
-
-    const filteredProjects = filter === 'all' 
-        ? projects 
-        : projects.filter(p => p.category === filter);
 
     const containerVariants = {
         hidden: { opacity: 0 },
@@ -115,46 +72,11 @@ const Projects = () => {
                 >
                     My Recent <strong className="purple">Works </strong>
                 </motion.h1>
-                
-                {/* Filter Buttons */}
-                <motion.div 
-                    style={{ 
-                        textAlign: 'center', 
-                        marginBottom: '40px' 
-                    }}
-                    initial={{ opacity: 0 }}
-                    animate={{ opacity: 1 }}
-                    transition={{ delay: 0.3 }}
-                >
-                    <ButtonGroup>
-                        {categories.map(cat => (
-                            <Button
-                                key={cat.key}
-                                variant={filter === cat.key ? 'primary' : 'outline-light'}
-                                onClick={() => setFilter(cat.key)}
-                                className="filter-btn"
-                                style={{
-                                    background: filter === cat.key
-                                        ? 'var(--imp-text-color)'
-                                        : 'transparent',
-                                    border: '1px solid var(--border-color)',
-                                    color: filter === cat.key ? '#fff' : 'var(--text-primary)',
-                                    padding: '8px 20px',
-                                    margin: '0 5px',
-                                    borderRadius: '20px',
-                                    transition: 'all 0.3s ease'
-                                }}
-                            >
-                                {cat.label}
-                            </Button>
-                        ))}
-                    </ButtonGroup>
-                </motion.div>
 
                 <p style={{ color: "var(--text-secondary)", textAlign: 'center', marginBottom: '30px' }}>
                     Here are a few projects I've worked on recently.
                 </p>
-                
+
                 <motion.div
                     variants={containerVariants}
                     initial="hidden"
@@ -162,7 +84,7 @@ const Projects = () => {
                 >
                     <Row style={{ justifyContent: "center", paddingBottom: "10px" }}>
                         <AnimatePresence>
-                            {filteredProjects.map((project, index) => (
+                            {projects.map((project, index) => (
                                 <Col md={6} lg={4} className="project-card" key={index}>
                                     <motion.div
                                         variants={itemVariants}
@@ -175,6 +97,7 @@ const Projects = () => {
                                             description={project.description}
                                             ghLink={project.ghLink}
                                             demoLink={project.demoLink}
+                                            appLink={project.appLink}
                                             techStack={project.techStack}
                                         />
                                     </motion.div>
